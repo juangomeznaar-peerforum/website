@@ -17,13 +17,15 @@ export function HomeClient() {
             <span className="w-6 h-[1px] bg-[#225430]"></span>
           </h2>
           <h1 className="font-serif text-5xl md:text-7xl lg:text-[84px] font-medium tracking-tight leading-[1.05] mb-8 text-[#0A1C12]">
-            Scale peer groups.
+            Executive peer groups.
             <br />
             <span className="italic text-[#526656]">Without the pain.</span>
           </h1>
           <p className="text-lg md:text-[22px] text-[#526656] font-light max-w-3xl mx-auto leading-relaxed mb-12 float-slow">
-            Powered by the top 1% of facilitators. We design, operate, and run peer coaching groups
-            for the world&apos;s most ambitious organizations.
+            Powered by the top 1% of facilitators. We design and run executive groups for the
+            world&apos;s most ambitious organizations. All the impact of high-quality forums,
+            delivered regularly to hundreds or thousands of executives, without the operational
+            burden.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button variant="primary" className="w-full sm:w-auto text-base px-8 py-4" asLink href="/contact">
@@ -38,10 +40,10 @@ export function HomeClient() {
 
       <StatBar
         stats={[
-          { value: '50K+', label: 'Leaders in forums' },
-          { value: '500+', label: 'Organizations served' },
-          { value: '94%', label: 'Participant Satisfaction' },
-          { value: '12x', label: 'More cost-effective than 1:1' },
+          { value: '—', label: 'Leaders in forums' },
+          { value: '—', label: 'Organizations served' },
+          { value: '—', label: 'Participant Satisfaction' },
+          { value: '—', label: 'More cost-effective than 1:1' },
         ]}
       />
 
@@ -63,27 +65,27 @@ export function HomeClient() {
               </h3>
               <p className="text-[#526656] text-lg font-light leading-relaxed mb-10">
                 You know peer coaching groups create transformative outcomes. But running them at
-                scale — the design, the matching, the facilitation, the operations — is a different
-                challenge entirely.
+                scale, including the design, the matching, the facilitation, the operations, is a
+                different challenge entirely.
               </p>
             </Reveal>
             <div className="space-y-8">
               {[
                 {
                   title: 'Finding great facilitators is hard',
-                  desc: 'Peer group facilitation is a specialized skill. Building a bench of qualified coaches takes years.',
+                  desc: 'Executive peer group facilitation is a specialized skill. Building a bench of qualified coaches takes years.',
                 },
                 {
                   title: 'Program design is complex',
-                  desc: 'Group composition, session structure, cadence — getting the design right requires deep experience.',
+                  desc: 'Group composition, session structure, and cadence require deep experience to get right.',
                 },
                 {
                   title: 'Operations become overwhelming',
-                  desc: 'Matching, scheduling, onboarding, tracking engagement — the logistics multiply exponentially.',
+                  desc: 'Matching, scheduling, and onboarding multiply exponentially, making personalized follow-up difficult to maintain at scale.',
                 },
                 {
                   title: 'Quality drops as you grow',
-                  desc: "What works for 5 groups falls apart at 50. Without a proven system, the personal touch disappears.",
+                  desc: 'What works for 5 groups falls apart at 50. Strategic insights are overlooked. Without a central system, you lose visibility into the aggregate themes and real-time challenges surfacing across your leadership population.',
                 },
               ].map((pain, idx) => (
                 <Reveal
@@ -107,16 +109,17 @@ export function HomeClient() {
                 The Peerforum Way
               </h2>
               <h3 className="font-serif text-3xl md:text-4xl font-medium tracking-tight mb-8 leading-tight">
-                We don&apos;t give you a tool. We run your peer groups for you.
+                We don&apos;t give you a tool. We craft and run your peer groups for you.
               </h3>
               <p className="text-[#D3DCD4] font-light text-lg leading-relaxed mb-6">
-                Peerforum is a full-service provider of peer coaching groups at scale. We design the
+                Peerforum is a full-service partner for executive and leadership. We design the
                 program, manage the operations, and facilitate every session with our own network of
                 expert coaches.
               </p>
               <p className="text-[#D3DCD4] font-light text-lg leading-relaxed border-t border-[#526656]/30 pt-6">
                 The result: a turnkey peer coaching program that scales from 5 groups to 500, with
-                the same intimacy and impact in every room.
+                the same intimacy and impact in every room, with consistent leadership results and
+                real-time visibility into the strategic insights surfacing across your organization.
               </p>
             </div>
           </Reveal>
@@ -151,17 +154,17 @@ export function HomeClient() {
               {
                 num: '01',
                 title: 'We design the program',
-                desc: 'Our team architects your peer group model — group composition, session structure, facilitation methodology, and success metrics.',
+                desc: 'Our team builds your executive group model, including group composition, session structure, and success metrics.',
               },
               {
                 num: '02',
                 title: 'We run the operations',
-                desc: "Matching, scheduling, onboarding, and engagement tracking — our operations team manages the logistics so you don't have to.",
+                desc: "We handle matching, scheduling, and onboarding so you don't have to. Our operations team provides the personalized follow-up required to keep engagement high at any scale.",
               },
               {
                 num: '03',
                 title: 'We facilitate every session',
-                desc: 'Our network of expert facilitators leads every group with a proven methodology. Consistent quality, every session, at any scale.',
+                desc: 'Our network of expert facilitators leads every group adapting a proven methodology to the specific dynamics and need of each cohort.',
               },
             ].map((step, idx) => (
               <Reveal key={idx} delay={idx * 150} direction="up">
@@ -180,6 +183,7 @@ export function HomeClient() {
         </div>
       </section>
 
+      {/* REVIEW: This entire facilitators preview section was not in the original content.md — all copy invented by Gemini */}
       {/* Our Facilitators Summary */}
       <section
         aria-labelledby="facilitators-heading"
@@ -244,6 +248,7 @@ export function HomeClient() {
         </div>
       </section>
 
+      {/* REVIEW: This "Who We Serve" audiences section was not in the original content.md — headings and card descriptions invented by Gemini */}
       {/* Audiences */}
       <section aria-labelledby="audiences-heading" className="px-6 md:px-12 py-32 bg-[#F6F8F6]">
         <div className="max-w-7xl mx-auto">

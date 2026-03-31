@@ -14,8 +14,8 @@ export function EnterpriseClient() {
             For Enterprise
           </h2>
           <h1 className="font-serif text-5xl md:text-7xl font-medium tracking-tight leading-[1.1] mb-8 text-[#0A1C12]">
-            Democratize coaching.{' '}
-            <span className="italic text-[#526656]">Build community.</span>
+            Embed peer coaching into{' '}
+            <span className="italic text-[#526656]">leadership programs.</span>
           </h1>
           <p className="text-xl md:text-[22px] text-[#526656] font-light leading-relaxed mb-10">
             Embed facilitated peer coaching groups directly into your leadership programs. Transform
@@ -37,10 +37,9 @@ export function EnterpriseClient() {
             id="strong-claim"
             className="font-serif text-3xl md:text-5xl text-[#0A1C12] max-w-4xl mx-auto leading-tight float-slow"
           >
-            Unlock collective wisdom:
-            <br />
+            Peer coaching turns shared challenges into{' '}
             <span className="italic text-[#225430]">
-              Peer coaching turns shared challenges into accelerated leadership growth.
+              accelerated leadership growth.
             </span>
           </h2>
         </Reveal>
@@ -108,7 +107,7 @@ export function EnterpriseClient() {
               {[
                 {
                   category: 'Context',
-                  text: 'Togetherness. A shared journey with peers facing the exact same organizational fires.',
+                  text: 'Community. A shared journey with peers facing the exact same organizational fires.',
                 },
                 {
                   category: 'Skill Building',
@@ -116,11 +115,11 @@ export function EnterpriseClient() {
                 },
                 {
                   category: 'Organizational Impact',
-                  text: 'Organically dissolves silos and builds deep, cross-functional empathy.',
+                  text: 'Organically dissolves silos and builds deep, cross-functional learning.',
                 },
                 {
                   category: 'Scalability',
-                  text: 'Democratized. Highly scalable across thousands of middle managers and rising leaders.',
+                  text: 'Enterprise-wide reach. Highly scalable across your leadership pipeline and rising managers.',
                 },
               ].map((item, idx) => (
                 <div key={idx} className="flex flex-col border-b border-[#526656]/30 pb-4">
@@ -154,9 +153,9 @@ export function EnterpriseClient() {
                   Embed a 12-touchpoint rhythm.
                 </h3>
                 <p className="text-[#526656] text-lg font-light leading-relaxed mb-10">
-                  Drop peer coaching directly into your existing leadership tracks. Instead of
-                  episodic seminars, leaders get a continuous rhythm of shared problem-solving and
-                  mutual accountability.
+                  Integrate peer coaching directly into your existing leadership tracks. Enhance
+                  episodic workshops with a continuous cadence of collaborative problem-solving and
+                  peer accountability.
                 </p>
               </Reveal>
               <div className="grid grid-cols-2 gap-8">
@@ -198,7 +197,7 @@ export function EnterpriseClient() {
                   {[
                     {
                       num: '1',
-                      title: 'Align with Curriculum',
+                      title: 'Program Architecture',
                       desc: 'We map our peer forum architecture directly to the themes and milestones of your existing L&D tracks.',
                       dark: false,
                     },
@@ -210,7 +209,7 @@ export function EnterpriseClient() {
                     },
                     {
                       num: '3',
-                      title: 'Skill Transfer',
+                      title: 'Coaching Skill Transfer',
                       desc: 'Through guided observation and practice, your leaders actively learn how to coach their own teams.',
                       dark: true,
                     },
