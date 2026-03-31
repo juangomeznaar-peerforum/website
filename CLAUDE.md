@@ -23,7 +23,7 @@ Peerforum is a full-service provider of peer coaching groups at scale for enterp
 
 ## Design System
 
-The design replicates a reference React component (provided as `reference/design-source.jsx`). **Replicate the visual output as faithfully as possible.**
+The design replicates a reference React component (provided as `design-source.jsx`). **Replicate the visual output as faithfully as possible.**
 
 ### Color Palette (use as Tailwind CSS custom colors)
 
@@ -154,7 +154,8 @@ Implementation: For MVP, use a simple form that POSTs to an API route or externa
 
 ## Content Source
 
-All page content is defined in `reference/content.md`. The React reference component in `reference/design-source.jsx` contains the exact copy used for each page. **Use the content from the reference component as the source of truth** — it has been edited and refined from the original markdown.
+All page content is defined in `content.md`. The React reference component 
+in `design-source.jsx` contains the exact copy used for each page.
 
 ---
 
