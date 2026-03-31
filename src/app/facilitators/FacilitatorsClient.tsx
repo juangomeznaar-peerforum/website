@@ -14,11 +14,12 @@ export function FacilitatorsClient() {
             Our Facilitators
           </h2>
           <h1 className="font-serif text-5xl md:text-7xl font-medium tracking-tight leading-[1.1] mb-8 text-[#0A1C12]">
-            Masters of <span className="italic text-[#526656]">group dynamics.</span>
+            The faces behind the{' '}
+            <span className="italic text-[#526656]">breakthroughs.</span>
           </h1>
           <p className="text-xl md:text-[22px] text-[#526656] font-light leading-relaxed mb-10 float-slow">
             We don&apos;t hire event moderators. We curate the top 1% of executive coaches and
-            behavioral experts in the world to architect profound breakthroughs.
+            foster deep connections and profound breakthroughs.
           </p>
           <Button variant="primary" className="text-base px-8 py-4" asLink href="/contact">
             Meet the Network
@@ -45,7 +46,7 @@ export function FacilitatorsClient() {
               Peerforum facilitators.
             </h3>
             <p className="text-[#D3DCD4] text-lg font-light leading-relaxed">
-              Our vetting process is grueling by design. We look beyond ICF certifications and
+              Our vetting process is strict. We look beyond ICF certifications and
               impressive resumes. We test for presence, the ability to manage conflict, and the
               courage to ask the uncomfortable questions that unlock true growth.
             </p>
@@ -60,17 +61,17 @@ export function FacilitatorsClient() {
               },
               {
                 step: '02',
-                title: 'Live Behavioral Auditions',
+                title: 'Live Simulation',
                 desc: 'Candidates facilitate simulated, high-friction peer groups where we intentionally introduce difficult personalities and dominant voices.',
               },
               {
                 step: '03',
-                title: 'Methodology Certification',
+                title: 'Methodology Training',
                 desc: 'Accepted facilitators undergo rigorous training in the proprietary Peerforum framework for bypassing small talk and engineering vulnerability.',
               },
               {
                 step: '04',
-                title: 'Continuous Calibration',
+                title: 'Ongoing Calibration',
                 desc: 'Every session is evaluated. Facilitators receive ongoing supervision, peer reviews, and quantitative feedback on group health.',
               },
             ].map((item, idx) => (
@@ -93,6 +94,7 @@ export function FacilitatorsClient() {
         </div>
       </section>
 
+      {/* REVIEW: This "What makes a Peerforum coach?" archetypes section was not in the original content.md — all copy invented by Gemini */}
       {/* Facilitator Archetypes */}
       <section
         aria-labelledby="facilitator-profile"
@@ -163,7 +165,8 @@ export function FacilitatorsClient() {
               The faces behind the breakthroughs.
             </h3>
             <p className="text-[#526656] text-lg font-light leading-relaxed max-w-2xl mx-auto">
-              A diverse, global bench of elite coaches, former executives, and behavioral experts.
+              A diverse, global bench of elite coaches, former executives, from diverse background
+              with a global footprint.
             </p>
           </Reveal>
 

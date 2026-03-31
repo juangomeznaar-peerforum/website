@@ -16,8 +16,6 @@ export function AboutClient() {
             </header>
 
             <div className="space-y-6 font-serif text-[19px] text-[#0A1C12] leading-relaxed">
-              <p>Dear Leader,</p>
-
               <p>The world of leadership has fundamentally changed.</p>
 
               <p>

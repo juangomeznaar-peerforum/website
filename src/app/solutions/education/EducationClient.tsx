@@ -14,11 +14,12 @@ export function EducationClient() {
           </h2>
           <h1 className="font-serif text-5xl md:text-7xl font-medium tracking-tight leading-[1.1] mb-8 text-[#0A1C12]">
             Sustain the momentum of{' '}
-            <span className="italic text-[#526656]">transformative growth.</span>
+            <span className="italic text-[#526656]">executive education.</span>
           </h1>
           <p className="text-xl md:text-[22px] text-[#526656] font-light leading-relaxed mb-10">
             A 1-year continuity program that begins the moment your core program ends. Prevent
-            post-program isolation and keep the university as their lifelong intellectual home.
+            post-program quick disengagement and establish the university as a lifelong strategic
+            anchor for their career.
           </p>
           <Button variant="primary" className="text-base px-8 py-4" asLink href="/contact">
             Explore Continuity
@@ -45,7 +46,7 @@ export function EducationClient() {
             <p className="text-[#526656] text-lg font-light leading-relaxed max-w-3xl mx-auto">
               Executive education ignites transformative growth through deep learning and powerful
               connections. But the abrupt return to the demands of leadership often breaks this
-              momentum, leaving a void where isolation can erode the program&apos;s full potential.
+              momentum, creating a gap where isolation can diminish the program&apos;s long-term impact.
             </p>
           </Reveal>
 
@@ -80,8 +81,8 @@ export function EducationClient() {
                 1-Year Continuity Forum
               </h4>
               <p className="text-[#0A1C12] font-light text-sm leading-relaxed px-4">
-                Sustained momentum. A structured 1-year program keeps the bond alive and provides a
-                dedicated space for reflection.
+                Sustained momentum. A structured 1-year program keeps the bond alive and extends
+                the university-student relationship.
               </p>
             </Reveal>
           </div>
@@ -111,7 +112,6 @@ export function EducationClient() {
             <h4 className="font-serif text-2xl text-[#526656] mb-8">Without Continuity</h4>
             <div className="space-y-6">
               {[
-                'Rapid network decay',
                 'Lonely reality of driving change solo',
                 'Diminishing bond with the university',
                 'Missed opportunity for lasting impact',
@@ -136,7 +136,6 @@ export function EducationClient() {
             </h4>
             <div className="space-y-6">
               {[
-                'Structured, regular touchpoints',
                 'Dynamic, ongoing peer collaboration',
                 'University remains their intellectual home',
                 'Sustained ROI and continuous growth',

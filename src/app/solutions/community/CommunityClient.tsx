@@ -14,8 +14,8 @@ export function CommunityClient() {
             For Premium Communities
           </h2>
           <h1 className="font-serif text-5xl md:text-7xl font-medium tracking-tight leading-[1.1] mb-8 text-[#0A1C12]">
-            Forums are the key to <span className="italic text-[#526656]">high-value</span>{' '}
-            communities.
+            Forums are the key to{' '}
+            <span className="italic text-[#526656]">community.</span>
           </h1>
           <p className="text-xl md:text-[22px] text-[#526656] font-light leading-relaxed mb-10">
             We design, operate, and facilitate peer forums that turn your casual members into a
@@ -27,6 +27,7 @@ export function CommunityClient() {
         </Reveal>
       </header>
 
+      {/* REVIEW: This partner networks banner section was not in the original content.md — entirely invented by Gemini */}
       {/* Top Networks Banner */}
       <section
         aria-label="Partner Networks"
@@ -74,7 +75,7 @@ export function CommunityClient() {
                 },
                 {
                   title: 'Commodity perceived value',
-                  desc: 'Viewed as just another Slack channel, newsletter, or event schedule competing for their time.',
+                  desc: 'Seen as a collection of standard community touchpoints competing for a leader\'s limited attention.',
                 },
               ].map((item, idx) => (
                 <div key={idx}>
@@ -101,16 +102,16 @@ export function CommunityClient() {
             <div className="space-y-8">
               {[
                 {
-                  title: 'Monthly commitment',
-                  desc: "Our facilitators lead small groups regularly. It's a recurring rhythm that builds habit and belonging.",
+                  title: 'High recurring engagement',
+                  desc: "Our facilitators lead small groups that meet every month. It's a recurring rhythm that builds habit and belonging, and drives attendance to events and benefits utilization.",
                 },
                 {
                   title: 'High willingness to pay',
-                  desc: 'Members gladly pay premium tier pricing for access to a confidential, facilitated forum.',
+                  desc: 'Members recognize the high value of a confidential, facilitated forum, which leads to significantly higher willingness to pay.',
                 },
                 {
                   title: 'Indispensable perceived value',
-                  desc: "The forum isn't a channel; it acts as their personal Board of Advisors for their career and life.",
+                  desc: 'The forum acts as a personal Board of Advisors for career and life, establishing a continuous rhythm of engagement.',
                 },
               ].map((item, idx) => (
                 <div key={idx}>
@@ -127,10 +128,10 @@ export function CommunityClient() {
 
       <StatBar
         stats={[
-          { value: '3.2x', label: 'Higher retention' },
-          { value: '91%', label: 'Find it most valuable' },
-          { value: '78%', label: 'NPS Increase' },
-          { value: '$0', label: 'Operational burden' },
+          { value: '—', label: 'Higher retention' },
+          { value: '—', label: 'Find it most valuable' },
+          { value: '—', label: 'NPS Increase' },
+          { value: '—', label: 'Operational burden' },
         ]}
       />
 
@@ -149,26 +150,26 @@ export function CommunityClient() {
             The forum model changes everything.
           </h3>
           <p className="text-[#526656] text-lg font-light leading-relaxed max-w-2xl">
-            Forums aren&apos;t just another engagement tactic. They&apos;re a fundamentally different
-            way to build community — one that creates real value for members.
+            Forums aren&apos;t just another engagement tactic. They are a strategic pillar that
+            provides a continuous rhythm of high-value support for members.
           </p>
         </Reveal>
         <div className="grid md:grid-cols-2 gap-8">
           {[
             {
-              title: 'Intimacy at scale',
+              title: 'Scale without losing intimacy',
               desc: 'We design and facilitate hundreds of forums simultaneously while maintaining the small-group experience that makes each one transformative.',
             },
             {
-              title: 'Revenue engine',
-              desc: 'Forums become a premium tier of your community — a high-value offering members are willing to pay for. Create sustainable revenue.',
+              title: 'Create sustainable revenue',
+              desc: 'Forums become a premium tier of your community — a high-value offering members are willing to pay for.',
             },
             {
-              title: 'Engagement flywheel',
+              title: 'Amplify broader engagement',
               desc: 'Forum members engage more with the broader community too. They attend more events, contribute more content, and bring referrals.',
             },
             {
-              title: 'Data you can act on',
+              title: 'Surface community intelligence',
               desc: 'See which topics resonate, which members are most engaged, and where your community is growing based on aggregate forum insights.',
             },
           ].map((val, idx) => (

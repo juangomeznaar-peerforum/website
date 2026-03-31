@@ -27,22 +27,19 @@ export function CaseStudiesClient() {
           <div className="max-w-4xl mx-auto mb-16">
             <Reveal direction="up" delay={100}>
               <p className="text-lg text-[#526656] font-light leading-relaxed mb-6">
-                When the <strong>SHRM Executive Network</strong> set out to create the ultimate
-                destination for the world&apos;s top HR leaders, they recognized a fundamental truth:
-                CHROs are profoundly isolated. They needed a confidential, high-trust environment to
-                solve complex organizational challenges with true peers.
+                SHRM set out to create the ultimate destination for the world&apos;s top HR leaders,
+                they recognized a fundamental truth: CHROs are profoundly isolated. They needed a
+                confidential, high-trust environment to solve complex organizational challenges with
+                true peers.
               </p>
               <p className="text-lg text-[#526656] font-light leading-relaxed">
-                They partnered with Peerforum to architect and scale a solution. Peerforum became the
-                operational engine and facilitation backbone for the entire initiative. By combining
-                SHRM&apos;s unparalleled reach with Peerforum&apos;s proprietary matching taxonomy and top 1%
-                executive coaches, they successfully launched a massive, highly curated peer coaching
-                program.
+                We partnered with SHRM to <strong>embed and run</strong> a confidential forum program
+                for their Executive Network.
               </p>
               <p className="text-lg text-[#0A1C12] font-medium leading-relaxed mt-8 border-l-[3px] border-[#225430] pl-6">
-                Today, Peerforum acts as a key partner in managing a 1,000+ community of top HR
-                executives across 70+ concurrent groups, cementing the program as the #1 most valued
-                component of the SHRM Executive Network.
+                Peerforum serves as the operational and facilitation engine for these groups. Using
+                our proprietary matching and elite coaches, we manage over 70 concurrent executive
+                groups for a community of 1,000+ HR leaders.
               </p>
             </Reveal>
           </div>
@@ -77,10 +74,10 @@ export function CaseStudiesClient() {
                 </div>
               </Reveal>
               <div className="grid grid-cols-2 gap-4">
-                <CaseStudyBox delay={350} value="800+" label="Participants" />
-                <CaseStudyBox delay={400} value="70+" label="Groups" />
-                <CaseStudyBox delay={450} value="30+" label="Facilitators" />
-                <CaseStudyBox delay={500} value="1000+" label="Sessions" sublabel="Run to Date" />
+                <CaseStudyBox delay={350} value="—" label="Participants" />
+                <CaseStudyBox delay={400} value="—" label="Groups" />
+                <CaseStudyBox delay={450} value="—" label="Facilitators" />
+                <CaseStudyBox delay={500} value="—" label="Sessions" sublabel="Run to Date" />
               </div>
             </div>
 
@@ -95,19 +92,17 @@ export function CaseStudiesClient() {
                 </div>
               </Reveal>
               <div className="grid grid-cols-2 gap-4">
-                <CaseStudyBox delay={450} value="94%" label="Active" sublabel="Members" />
+                <CaseStudyBox delay={450} value="—" label="Active" sublabel="Members" />
                 <CaseStudyBox
                   delay={500}
-                  value="4.6"
-                  suffix="/5"
+                  value="—"
                   label="Facilitation"
                   sublabel="Score"
                 />
-                <CaseStudyBox delay={550} value="70+" label="Monthly" sublabel="Sessions" />
+                <CaseStudyBox delay={550} value="—" label="Monthly" sublabel="Sessions" />
                 <CaseStudyBox
                   delay={600}
-                  value="4.4"
-                  suffix="/5"
+                  value="—"
                   label="Session"
                   sublabel="Score"
                 />
@@ -127,28 +122,28 @@ export function CaseStudiesClient() {
               <div className="grid grid-cols-2 gap-4">
                 <CaseStudyBox
                   delay={550}
-                  value="#1"
+                  value="—"
                   label="Most Valued"
                   sublabel="Component"
                   theme="dark"
                 />
                 <CaseStudyBox
                   delay={600}
-                  value="#1"
+                  value="—"
                   label="Most Adopted"
                   sublabel="Component"
                   theme="dark"
                 />
                 <CaseStudyBox
                   delay={650}
-                  value="#1"
+                  value="—"
                   label="Most Active"
                   sublabel="Participants"
                   theme="dark"
                 />
                 <CaseStudyBox
                   delay={700}
-                  value="#1"
+                  value="—"
                   label="Driver Of"
                   sublabel="Retention"
                   theme="dark"
@@ -159,6 +154,7 @@ export function CaseStudiesClient() {
         </div>
       </section>
 
+      {/* REVIEW: This entire testimonials section was not in the original content.md — all quotes invented by Gemini */}
       {/* Testimonials */}
       <section
         aria-label="Testimonials"
