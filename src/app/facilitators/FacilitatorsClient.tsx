@@ -170,22 +170,37 @@ export function FacilitatorsClient() {
             </p>
           </Reveal>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-4xl mx-auto">
-            {Array.from({ length: 16 }).map((_, i) => (
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6 max-w-5xl mx-auto">
+            {[
+              { name: 'Andre Hartwich', src: '/facilitators/andre-hartwich.jpg' },
+              { name: 'Ed Johnson', src: '/facilitators/ed-johnson.jpg' },
+              { name: 'Fabiola Dieudonne Aniton', src: '/facilitators/fabiola-dieudonne-aniton.jpeg' },
+              { name: 'Florentine Versteeg', src: '/facilitators/florentine-versteeg.jpeg' },
+              { name: 'Marcela Contigiani', src: '/facilitators/marcela-contigiani.jpg' },
+              { name: 'Masa Gong', src: '/facilitators/masa-gong.png' },
+              { name: 'Michelle Clarke', src: '/facilitators/michelle-clarke.jpg' },
+              { name: 'Sergio Ledesma', src: '/facilitators/sergio-ledesma.png' },
+              { name: 'Shereen Thor', src: '/facilitators/shereen-thor.jpeg' },
+              { name: 'Ute Franzen-Waschke', src: '/facilitators/ute-franzen-waschke.jpg' },
+            ].map((facilitator, i) => (
               <Reveal
-                key={i}
-                delay={(i % 4) * 100}
+                key={facilitator.name}
+                delay={(i % 5) * 100}
                 direction="scale"
-                className="aspect-square relative rounded-xl overflow-hidden group border border-[#D3DCD4] shadow-sm"
+                className="aspect-square relative rounded-xl overflow-hidden group border border-[#D3DCD4] shadow-sm cursor-pointer"
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src={`https://i.pravatar.cc/300?img=${i * 3 + 10}`}
-                  alt={`Facilitator portrait ${i + 1}`}
+                  src={facilitator.src}
+                  alt={facilitator.name}
                   loading="lazy"
-                  className="w-full h-full object-cover grayscale opacity-90 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                  className="w-full h-full object-cover grayscale brightness-90 group-hover:grayscale-0 group-hover:brightness-110 group-hover:scale-105 transition-all duration-700"
                 />
-                <div className="absolute inset-0 bg-[#225430] mix-blend-multiply opacity-40 group-hover:opacity-10 transition-opacity duration-700"></div>
+                <div className="absolute inset-x-0 bottom-0 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out bg-gradient-to-t from-[#0A1C12]/80 to-transparent pt-12 pb-4 px-4">
+                  <p className="text-[#F6F8F6] text-sm font-medium text-center leading-tight">
+                    {facilitator.name}
+                  </p>
+                </div>
               </Reveal>
             ))}
           </div>
