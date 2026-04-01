@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   description:
     "Peerforum designs, operates, and facilitates high-end peer coaching groups for enterprise, education, and premium communities.",
-  metadataBase: new URL("https://peerforum.com"),
+  metadataBase: new URL("https://www.peerforum.com"),
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
@@ -41,17 +41,18 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://peerforum.com",
+    url: "https://www.peerforum.com",
     siteName: "Peerforum",
     title: "Peerforum | Peer Coaching Groups at Scale",
     description:
       "Full-service provider of peer coaching groups at scale for enterprise, education, and premium communities.",
     images: [
       {
-        url: "/og-image.png",
+        url: "https://www.peerforum.com/og-image.png",
         width: 1200,
         height: 630,
         type: "image/png",
+        alt: "Peerforum — Peer Coaching Groups at Scale",
       },
     ],
   },
@@ -60,7 +61,7 @@ export const metadata: Metadata = {
     title: "Peerforum | Peer Coaching Groups at Scale",
     description:
       "Full-service provider of peer coaching groups at scale for enterprise, education, and premium communities.",
-    images: ["/og-image.png"],
+    images: ["https://www.peerforum.com/og-image.png"],
   },
 };
 
