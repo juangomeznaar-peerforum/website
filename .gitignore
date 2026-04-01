@@ -40,3 +40,6 @@ next-env.d.ts
 
 # context
 .context/
+
+# font cache
+scripts/.fonts/
