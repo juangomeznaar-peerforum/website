@@ -61,7 +61,8 @@ export function CaseStudiesClient() {
             </div>
           </Reveal>
 
-          {/* 3 Columns Grid */}
+          {/* TODO: Re-enable when metrics data is ready */}
+          {false && (
           <div className="grid lg:grid-cols-3 gap-10 md:gap-12 max-w-6xl mx-auto">
             {/* Column 1: Scale */}
             <div>
@@ -151,11 +152,13 @@ export function CaseStudiesClient() {
               </div>
             </div>
           </div>
+          )}
         </div>
       </section>
 
+      {/* TODO: Re-enable when testimonials data is ready */}
       {/* REVIEW: This entire testimonials section was not in the original content.md — all quotes invented by Gemini */}
-      {/* Testimonials */}
+      {false && (
       <section
         aria-label="Testimonials"
         className="px-6 md:px-12 py-32 bg-[#0A1C12] text-[#F6F8F6]"
@@ -214,6 +217,7 @@ export function CaseStudiesClient() {
           </div>
         </div>
       </section>
+      )}
     </main>
   );
 }
