@@ -50,41 +50,42 @@ export function EducationClient() {
             </p>
           </Reveal>
 
-          <div className="grid md:grid-cols-3 gap-8 relative">
+          <div className="relative">
             <div className="hidden md:block absolute top-6 left-12 right-12 h-[2px] bg-gradient-to-r from-[#0A1C12] via-[#D3DCD4] to-[#225430] z-0 shimmer"></div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <Reveal direction="up" delay={100} className="relative z-10 pt-10 text-center">
+                <div className="w-4 h-4 bg-[#0A1C12] rounded-full mx-auto mb-6 absolute top-0 left-1/2 -translate-x-1/2 -translate-y-[7px]"></div>
+                <h4 className="font-serif text-xl font-medium mb-3 text-[#0A1C12]">
+                  Program Active
+                </h4>
+                <p className="text-[#526656] font-light text-sm leading-relaxed px-4">
+                  Ignited growth. Participants are immersed, deeply connected, and driven by dynamic
+                  peer learning.
+                </p>
+              </Reveal>
 
-            <Reveal direction="up" delay={100} className="relative z-10 pt-10 text-center">
-              <div className="w-4 h-4 bg-[#0A1C12] rounded-full mx-auto mb-6 absolute top-0 left-1/2 -translate-x-1/2 -translate-y-[7px]"></div>
-              <h4 className="font-serif text-xl font-medium mb-3 text-[#0A1C12]">
-                Program Active
-              </h4>
-              <p className="text-[#526656] font-light text-sm leading-relaxed px-4">
-                Ignited growth. Participants are immersed, deeply connected, and driven by dynamic
-                peer learning.
-              </p>
-            </Reveal>
+              <Reveal direction="up" delay={300} className="relative z-10 pt-10 text-center">
+                <div className="w-4 h-4 bg-[#D3DCD4] border-2 border-[#0A1C12] rounded-full mx-auto mb-6 absolute top-0 left-1/2 -translate-x-1/2 -translate-y-[7px]"></div>
+                <h4 className="font-serif text-xl font-medium mb-3 text-[#526656]">
+                  Abrupt Isolation
+                </h4>
+                <p className="text-[#526656] font-light text-sm leading-relaxed px-4">
+                  Back to the grind. Drowning in urgent tasks with no room to think. The vanishing
+                  cohort effect takes over.
+                </p>
+              </Reveal>
 
-            <Reveal direction="up" delay={300} className="relative z-10 pt-10 text-center">
-              <div className="w-4 h-4 bg-[#D3DCD4] border-2 border-[#0A1C12] rounded-full mx-auto mb-6 absolute top-0 left-1/2 -translate-x-1/2 -translate-y-[7px]"></div>
-              <h4 className="font-serif text-xl font-medium mb-3 text-[#526656]">
-                Abrupt Isolation
-              </h4>
-              <p className="text-[#526656] font-light text-sm leading-relaxed px-4">
-                Back to the grind. Drowning in urgent tasks with no room to think. The vanishing
-                cohort effect takes over.
-              </p>
-            </Reveal>
-
-            <Reveal direction="up" delay={500} className="relative z-10 pt-10 text-center">
-              <div className="w-6 h-6 bg-[#225430] rounded-full mx-auto mb-6 absolute top-0 left-1/2 -translate-x-1/2 -translate-y-[11px] ring-4 ring-[#225430]/20"></div>
-              <h4 className="font-serif text-xl font-medium mb-3 text-[#225430]">
-                1-Year Continuity Forum
-              </h4>
-              <p className="text-[#0A1C12] font-light text-sm leading-relaxed px-4">
-                Sustained momentum. A structured 1-year program keeps the bond alive and extends
-                the university-student relationship.
-              </p>
-            </Reveal>
+              <Reveal direction="up" delay={500} className="relative z-10 pt-10 text-center">
+                <div className="w-6 h-6 bg-[#225430] rounded-full mx-auto mb-6 absolute top-0 left-1/2 -translate-x-1/2 -translate-y-[11px] ring-4 ring-[#225430]/20"></div>
+                <h4 className="font-serif text-xl font-medium mb-3 text-[#225430]">
+                  1-Year Continuity Forum
+                </h4>
+                <p className="text-[#0A1C12] font-light text-sm leading-relaxed px-4">
+                  Sustained momentum. A structured 1-year program keeps the bond alive and extends
+                  the university-student relationship.
+                </p>
+              </Reveal>
+            </div>
           </div>
         </div>
       </section>
