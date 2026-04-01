@@ -9,7 +9,20 @@ export const metadata: Metadata = {
     title: 'Enterprise Peer Coaching | Peerforum',
     description:
       'Embed facilitated peer coaching groups directly into enterprise leadership programs.',
-    url: 'https://peerforum.com/solutions/enterprise',
+    url: 'https://www.peerforum.com/solutions/enterprise',
+    images: [
+      {
+        url: 'https://www.peerforum.com/og-image.png',
+        width: 1200,
+        height: 630,
+        type: 'image/png',
+        alt: 'Peerforum — Peer Coaching Groups at Scale',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['https://www.peerforum.com/og-image.png'],
   },
 };
 
