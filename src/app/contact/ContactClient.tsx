@@ -6,10 +6,38 @@ import { Button } from '@/components/Button';
 
 export function ContactClient() {
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState('');
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitted(true);
+    setSending(true);
+    setError('');
+
+    const form = e.currentTarget;
+    const data = {
+      firstName: (form.elements.namedItem('firstName') as HTMLInputElement).value,
+      lastName: (form.elements.namedItem('lastName') as HTMLInputElement).value,
+      email: (form.elements.namedItem('email') as HTMLInputElement).value,
+      company: (form.elements.namedItem('company') as HTMLInputElement).value,
+      phone: (form.elements.namedItem('phone') as HTMLInputElement).value,
+      message: (form.elements.namedItem('message') as HTMLTextAreaElement).value,
+    };
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+
+      if (!res.ok) throw new Error('Failed to send');
+      setSubmitted(true);
+    } catch {
+      setError('Something went wrong. Please try again or email us directly.');
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -132,8 +160,12 @@ export function ContactClient() {
                 />
               </div>
 
-              <Button variant="primary" className="w-full text-base py-4" type="submit">
-                Send Message
+              {error && (
+                <p className="text-red-600 text-sm text-center">{error}</p>
+              )}
+
+              <Button variant="primary" className="w-full text-base py-4" type="submit" disabled={sending}>
+                {sending ? 'Sending...' : 'Send Message'}
               </Button>
             </form>
           </Reveal>
