@@ -128,10 +128,10 @@ export function CommunityClient() {
 
       <StatBar
         stats={[
-          { value: '—', label: 'Higher retention' },
-          { value: '—', label: 'Find it most valuable' },
-          { value: '—', label: 'NPS Increase' },
-          { value: '—', label: 'Operational burden' },
+          { value: '3.2x', label: 'Higher Retention' },
+          { value: '91%', label: 'Find It Most Valuable' },
+          { value: '82%', label: 'NPS Increase' },
+          { value: '$0', label: 'Operational Burden' },
         ]}
       />
 
