@@ -70,8 +70,9 @@ Quick reference for developers. Full brand book: `brand/Peerforum-Brand-Book.pdf
 
 ### Isotipo (Dot Circle)
 
-- A circle composed of ~60–80 dots of varying sizes representing peer diversity
-- Larger dots concentrated center-right, smaller dots on periphery
+- A circle composed of ~120 dots arranged in a hexagonal grid pattern
+- Larger dots concentrated at center, smaller dots toward periphery
+- Faithful reproduction of the original 2021 brand book isotipo
 - See `brand/assets/` for SVG files
 
 ### Rules
