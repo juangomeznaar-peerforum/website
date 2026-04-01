@@ -5,7 +5,6 @@ Generates a professional editorial PDF using reportlab.
 """
 
 import math
-import random
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.colors import HexColor, white, black
 from reportlab.lib.units import mm, cm
@@ -64,42 +63,68 @@ class BrandBook:
         self.c.setFont("Helvetica", 8)
         self.c.drawRightString(W - MARGIN, 30, str(self.page_num))
 
+    # Isotipo dot data: hex grid pattern faithful to 2021 brand book
+    # Coordinates in 200x200 viewBox, center at (100,100), boundary radius ~82
+    # Generated with seed 2021 for deterministic layout
+    ISOTIPO_DOTS = [
+        (99.9, 25.9, 3.2), (85.2, 27.7, 3.8), (129.0, 28.0, 3.4),
+        (73.0, 28.3, 3.1), (113.9, 28.5, 3.1), (147.9, 37.9, 3.4),
+        (51.1, 38.0, 3.4), (106.7, 38.2, 3.9), (64.9, 38.5, 4.1),
+        (92.3, 38.9, 4.1), (122.4, 39.2, 3.7), (135.1, 39.3, 3.6),
+        (78.8, 40.9, 4.4), (84.7, 50.5, 5.1), (45.2, 50.6, 3.0),
+        (58.9, 51.2, 4.1), (115.3, 51.2, 4.7), (127.0, 51.3, 5.0),
+        (100.6, 51.7, 5.3), (71.6, 52.5, 4.0), (142.6, 52.8, 3.8),
+        (154.5, 52.8, 3.5), (148.8, 62.2, 4.4), (37.4, 62.4, 3.9),
+        (78.1, 62.4, 4.8), (107.8, 63.0, 6.4), (164.4, 63.2, 3.6),
+        (63.8, 63.3, 5.4), (93.7, 63.8, 5.1), (50.8, 63.9, 4.5),
+        (119.6, 63.9, 6.0), (134.0, 64.9, 4.5), (141.3, 74.4, 5.3),
+        (115.4, 74.8, 6.2), (154.7, 74.8, 4.6), (85.9, 74.9, 6.8),
+        (128.6, 74.9, 5.2), (57.0, 75.2, 4.6), (70.6, 75.7, 5.3),
+        (30.3, 75.8, 3.2), (100.2, 75.9, 5.9), (44.9, 76.0, 4.3),
+        (168.7, 76.6, 4.1), (38.4, 86.8, 3.8), (133.5, 86.8, 6.0),
+        (162.3, 87.1, 4.9), (94.4, 87.2, 7.3), (108.1, 87.7, 7.9),
+        (177.7, 88.1, 3.5), (65.8, 88.4, 6.3), (79.1, 88.4, 6.7),
+        (121.1, 88.8, 7.0), (23.7, 89.0, 2.7), (49.8, 89.0, 5.4),
+        (149.6, 89.2, 5.1), (72.9, 98.8, 5.8), (170.9, 99.1, 3.9),
+        (86.8, 99.3, 8.2), (59.2, 99.9, 5.7), (43.2, 100.0, 4.9),
+        (128.3, 100.0, 7.3), (100.5, 100.2, 9.2), (30.8, 100.7, 3.9),
+        (113.7, 100.9, 8.3), (157.5, 101.0, 4.7), (143.1, 101.3, 5.2),
+        (51.9, 111.1, 4.9), (37.1, 111.2, 4.3), (150.3, 111.2, 6.1),
+        (177.4, 111.6, 3.4), (120.7, 111.7, 7.2), (64.9, 113.0, 6.5),
+        (164.1, 113.0, 4.3), (93.0, 113.1, 6.4), (77.9, 113.2, 7.4),
+        (106.8, 113.5, 7.6), (135.5, 113.5, 6.5), (23.7, 113.6, 2.7),
+        (170.7, 122.9, 4.1), (155.4, 123.2, 4.8), (100.4, 124.2, 6.8),
+        (72.9, 124.3, 6.6), (57.8, 124.6, 5.2), (126.7, 124.7, 5.7),
+        (31.5, 124.9, 3.7), (141.5, 125.0, 5.6), (43.4, 125.1, 3.9),
+        (85.9, 125.4, 7.3), (112.9, 125.4, 7.4), (51.3, 135.1, 3.7),
+        (122.2, 135.6, 6.5), (38.2, 135.7, 3.4), (134.1, 136.4, 4.8),
+        (161.8, 136.4, 3.8), (78.1, 136.7, 6.2), (64.6, 136.9, 5.4),
+        (108.3, 137.1, 6.4), (149.3, 137.5, 4.6), (93.6, 137.7, 6.8),
+        (42.8, 147.9, 3.3), (113.5, 148.1, 5.6), (142.9, 148.2, 4.8),
+        (155.7, 148.3, 4.2), (87.3, 148.9, 5.4), (100.1, 148.9, 5.0),
+        (127.1, 148.9, 4.6), (72.4, 149.3, 5.0), (59.3, 149.6, 3.8),
+        (120.5, 159.3, 4.2), (147.7, 159.3, 3.8), (93.5, 159.6, 4.2),
+        (135.9, 159.8, 3.5), (51.8, 160.0, 3.5), (106.8, 160.2, 4.3),
+        (79.0, 160.7, 3.9), (63.6, 161.6, 3.2), (101.5, 171.6, 3.5),
+        (126.6, 171.7, 3.6), (86.5, 173.0, 3.0), (70.6, 173.8, 2.7),
+        (115.5, 174.2, 3.6),
+    ]
+
     def draw_isotipo(self, cx, cy, radius, base_color=None):
-        """Draw the Peerforum isotipo: a circle of dots of varying sizes."""
+        """Draw the Peerforum isotipo: a circle of dots of varying sizes.
+        Uses fixed dot data from the 2021 brand book pattern, scaled to fit."""
         if base_color is None:
             base_color = COLORS['accent_sage']
 
-        random.seed(42)  # Deterministic layout
-        dots = []
-        num_dots = 70
+        # Scale from 200x200 viewBox to target radius
+        scale = radius / 100.0  # viewBox center is 100,100, effective radius ~82
 
-        for i in range(num_dots):
-            # Distribute dots in a circular pattern
-            angle = random.uniform(0, 2 * math.pi)
-            # Use sqrt for uniform area distribution
-            r = radius * math.sqrt(random.uniform(0.05, 1.0))
-
-            # Dot size: larger towards center-right, smaller at periphery
-            dist_from_center = r / radius
-            # Bias larger dots toward center-right
-            center_right_bias = 1.0 - 0.5 * dist_from_center
-            if math.cos(angle) > 0:  # Right side
-                center_right_bias += 0.2
-
-            base_size = radius * 0.03
-            max_size = radius * 0.14
-            size = base_size + (max_size - base_size) * center_right_bias * random.uniform(0.3, 1.0)
-
-            x = cx + r * math.cos(angle)
-            y = cy + r * math.sin(angle)
-            dots.append((x, y, size))
-
-        # Sort by size so larger dots render on top
-        dots.sort(key=lambda d: d[2])
-
-        for x, y, size in dots:
-            self.c.setFillColor(base_color)
-            self.c.circle(x, y, size, fill=1, stroke=0)
+        self.c.setFillColor(base_color)
+        for dx, dy, dr in self.ISOTIPO_DOTS:
+            x = cx + (dx - 100) * scale
+            y = cy - (dy - 100) * scale  # flip Y for PDF coords
+            r = dr * scale
+            self.c.circle(x, y, r, fill=1, stroke=0)
 
     # ──────────────────────────────────────────────────────
     # PAGE 1: Cover
@@ -360,9 +385,9 @@ class BrandBook:
         y -= 25
 
         desc = [
-            "The Peerforum isotipo is a circle composed of approximately 60–80 dots of",
-            "varying sizes. Larger dots concentrate toward the center-right, while smaller",
-            "dots disperse toward the periphery, creating a gradient of scale.",
+            "The Peerforum isotipo is a circle composed of approximately 120 dots of",
+            "varying sizes arranged in a hexagonal grid. Larger dots concentrate toward",
+            "the center, while smaller dots disperse toward the periphery.",
             "",
             "The dots represent the diversity of leaders and peers. The circular arrangement",
             "symbolizes group cohesion and equality. Some dots merge together, reflecting the",
