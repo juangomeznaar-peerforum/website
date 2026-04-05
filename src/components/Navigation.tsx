@@ -31,6 +31,7 @@ export function Navigation() {
     { href: '/about', label: 'About Us' },
     { href: '/facilitators', label: 'Our Facilitators' },
     { href: '/case-studies', label: 'Case Studies' },
+    { href: '/impact', label: 'Our Impact' },
   ];
 
   const isAboutActive = aboutLinks.some((l) => pathname === l.href);
