@@ -2,11 +2,11 @@ import type { Metadata } from 'next';
 import { AboutClient } from './AboutClient';
 
 export const metadata: Metadata = {
-  title: 'About Peerforum',
+  title: 'About',
   description:
     'Peerforum was built to solve the profound isolation of leadership by delivering collective intelligence and togetherness at scale.',
   openGraph: {
-    title: 'About Peerforum',
+    title: 'About',
     description:
       'Peerforum was built to solve the profound isolation of leadership by delivering collective intelligence and togetherness at scale.',
     url: 'https://www.peerforum.com/about',
