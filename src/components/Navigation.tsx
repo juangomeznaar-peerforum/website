@@ -30,7 +30,6 @@ export function Navigation() {
   const aboutLinks = [
     { href: '/about', label: 'About Us' },
     { href: '/facilitators', label: 'Our Facilitators' },
-    { href: '/case-studies', label: 'Case Studies' },
     { href: '/impact', label: 'Our Impact' },
   ];
 

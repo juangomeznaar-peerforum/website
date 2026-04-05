@@ -4,64 +4,64 @@ import { Reveal } from '@/components/Reveal';
 
 export function AboutClient() {
   return (
-    <main className="fade-in pt-32 md:pt-48 pb-32 bg-[#F6F8F6]">
-      <article className="px-6 md:px-12 max-w-3xl mx-auto">
-        <Reveal direction="up">
-          <div className="bg-[#FAFAFA] border border-[#D3DCD4] p-12 md:p-20 rounded-sm shadow-sm relative elegant-hover">
-            <header className="mb-12">
-              <h1 className="font-serif text-4xl md:text-5xl font-medium tracking-tight text-[#0A1C12] mb-4">
-                A letter on isolation.
-              </h1>
-              <div className="w-16 h-[2px] bg-[#225430]"></div>
-            </header>
+    <main className="fade-in">
+      <section
+        id="story"
+        className="bg-[#0A1C12] py-[120px]"
+      >
+        <div className="px-6 md:px-12 max-w-[740px] mx-auto">
+          <Reveal direction="up">
+            <p className="text-[11px] font-sans font-semibold tracking-[0.16em] uppercase text-[#225430] mb-10">
+              What We Believe
+            </p>
+          </Reveal>
 
-            <div className="space-y-6 font-serif text-[19px] text-[#0A1C12] leading-relaxed">
-              <p>The world of leadership has fundamentally changed.</p>
-
-              <p>
-                Accelerated by the pandemic and the permanent shift to distributed work, the natural
-                collisions and organic mentorship that used to define executive growth have vanished.
+          <div className="font-serif text-[clamp(24px,3.2vw,36px)] leading-[1.5]">
+            <Reveal direction="up" delay={100}>
+              <p className="text-white/[0.92] mb-8">
+                The most effective form of leadership development has always been the peer forum — a
+                small group of leaders who meet regularly, share real challenges, and coach each other
+                with honesty and trust.
               </p>
+            </Reveal>
 
-              <p>
-                Today, leaders are operating in unprecedented isolation. You are expected to navigate
-                complex, structural challenges—shifting market dynamics, team burnout, strategic
-                pivots—with less visibility and less human support than ever before. The higher you
-                climb, the harder it is to find objective, unfiltered feedback from people who
-                genuinely understand the weight of your decisions.
+            <Reveal direction="up" delay={200}>
+              <p className="text-white/40 mb-8">
+                But for most of its history, this experience has been reserved for a very small group:
+                CEOs. People with the seniority, the flexibility, and the network to find the right
+                peers, carve out the time, travel to the right room, and commit for years.
               </p>
+            </Reveal>
 
-              <p>
-                You cannot always share your deepest doubts with your board without triggering panic.
-                You cannot workshop sensitive changes with your subordinates. And friends outside
-                your industry rarely grasp the nuance of the fires you are fighting.
+            <Reveal direction="up" delay={300}>
+              <p className="text-white/[0.92] mb-8">
+                That&apos;s too much friction for the VP navigating her first board. For the GM scaling
+                a business unit across three time zones. For the director who&apos;s never had a peer
+                who truly understands what she&apos;s going through.
               </p>
+            </Reveal>
 
-              <p>
-                But when you remove that isolation—when you put a leader in a room with true peers
-                who understand the exact burden of their seat, guided by an expert who knows how to
-                bypass small talk—the transformation is profound.
-              </p>
-
-              <p>
-                We built Peerforum because standard networking has become superficial, and 1-on-1
-                coaching often reinforces the lonely reality of driving change. We engineered a
-                system to deliver collective intelligence and togetherness at scale.
-              </p>
-
-              <p>
-                It is the community we wished we had. And we are honored to build it for you.
-              </p>
-
-              <footer className="pt-8">
-                <span className="font-sans font-bold text-sm tracking-widest text-[#225430] uppercase">
-                  The Founders, Peerforum
+            <Reveal direction="up" delay={400}>
+              <p className="mb-8">
+                <span className="text-white/40">
+                  We believe every leader — not just the CEO — deserves access to a room full of peers
+                  who get it.{' '}
                 </span>
-              </footer>
-            </div>
+                <span className="text-[#225430]">
+                  A global pool of the right people. A world-class facilitator. A rhythm that fits a
+                  real schedule. Zero friction.
+                </span>
+              </p>
+            </Reveal>
+
+            <Reveal direction="up" delay={500}>
+              <p className="text-white/[0.92]">
+                That&apos;s what we build.
+              </p>
+            </Reveal>
           </div>
-        </Reveal>
-      </article>
+        </div>
+      </section>
     </main>
   );
 }
