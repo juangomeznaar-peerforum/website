@@ -46,15 +46,16 @@ export function ImpactClient() {
   return (
     <main className="fade-in pt-32 md:pt-48 pb-0 bg-[#F6F8F6]">
       {/* Hero */}
-      <section aria-label="Our Impact Hero" className="px-6 md:px-12 pb-20 md:pb-24 text-center">
+      <section aria-label="Our Impact Hero" className="px-6 md:px-12 pb-10 md:pb-14 text-center">
         <div className="max-w-4xl mx-auto">
           <Reveal direction="down">
-            <p className="text-[#225430] uppercase text-xs tracking-widest font-medium mb-5">
-              Our Impact
+            <p className="text-[#225430] uppercase text-xs tracking-widest font-medium mb-5 flex items-center justify-center gap-3">
+              <span className="w-6 h-[1px] bg-[#225430]"></span> Our Impact{' '}
+              <span className="w-6 h-[1px] bg-[#225430]"></span>
             </p>
           </Reveal>
           <Reveal direction="down" delay={100}>
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-[56px] font-medium tracking-tight leading-[1.15] mb-6 text-[#0A1C12]">
+            <h1 className="font-serif text-[clamp(32px,4.5vw,52px)] font-medium tracking-tight leading-[1.15] mb-6 text-[#0A1C12]">
               Where peer coaching becomes infrastructure.
             </h1>
           </Reveal>

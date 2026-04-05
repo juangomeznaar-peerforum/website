@@ -38,9 +38,6 @@ export function Footer() {
             <Link href="/facilitators" className="hover:text-[#F6F8F6] transition-colors">
               Our Facilitators
             </Link>
-            <Link href="/case-studies" className="hover:text-[#F6F8F6] transition-colors">
-              Case Studies
-            </Link>
             <Link href="/impact" className="hover:text-[#F6F8F6] transition-colors">
               Our Impact
             </Link>
