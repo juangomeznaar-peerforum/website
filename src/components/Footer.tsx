@@ -3,7 +3,7 @@ import { Button } from './Button';
 
 export function Footer() {
   return (
-    <footer className="bg-[#0A1C12] text-[#F6F8F6] py-24 px-6 md:px-12">
+    <footer data-theme="dark" className="bg-[#0A1C12] text-[#F6F8F6] py-24 px-6 md:px-12">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-end border-b border-[#526656]/30 pb-16 mb-16 gap-12">
         <div className="max-w-2xl">
           <h2 className="font-serif text-4xl md:text-6xl font-medium tracking-tight leading-tight mb-6 text-[#F6F8F6]">
