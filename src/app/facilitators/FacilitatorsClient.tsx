@@ -30,6 +30,7 @@ export function FacilitatorsClient() {
       {/* The 1% Standard */}
       <section
         aria-labelledby="acceptance-rate-heading"
+        data-theme="dark"
         className="px-6 md:px-12 py-32 bg-[#0A1C12] text-[#F6F8F6]"
       >
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">

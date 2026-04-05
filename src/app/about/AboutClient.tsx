@@ -7,6 +7,7 @@ export function AboutClient() {
     <main className="fade-in">
       <section
         id="story"
+        data-theme="dark"
         className="bg-[#0A1C12] py-[120px]"
       >
         <div className="px-8 max-w-[760px] mx-auto">

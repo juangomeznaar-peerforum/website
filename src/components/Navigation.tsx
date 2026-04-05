@@ -8,6 +8,7 @@ import { Button } from './Button';
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isOverDark, setIsOverDark] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
 
@@ -16,6 +17,27 @@ export function Navigation() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    const checkOverlap = () => {
+      const navHeight = 80;
+      const navBottom = navHeight;
+      const darkSections = document.querySelectorAll('[data-theme="dark"]');
+      let overDark = false;
+      for (const section of darkSections) {
+        const rect = section.getBoundingClientRect();
+        if (rect.top < navBottom && rect.bottom > 0) {
+          overDark = true;
+          break;
+        }
+      }
+      setIsOverDark(overDark);
+    };
+
+    checkOverlap();
+    window.addEventListener('scroll', checkOverlap, { passive: true });
+    return () => window.removeEventListener('scroll', checkOverlap);
+  }, [pathname]);
 
   useEffect(() => {
     setIsMobileMenuOpen(false);
@@ -35,6 +57,9 @@ export function Navigation() {
 
   const isAboutActive = aboutLinks.some((l) => pathname === l.href);
 
+  // When nav is over a dark section and hasn't activated its scrolled bg, use light text
+  const useLightText = isOverDark && !isScrolled;
+
   return (
     <nav
       aria-label="Main Navigation"
@@ -47,19 +72,27 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
         <Link
           href="/"
-          className="font-serif text-2xl font-medium tracking-tight text-[#0A1C12]"
+          className={`font-serif text-2xl font-medium tracking-tight transition-colors duration-300 ${
+            useLightText ? 'text-[#F6F8F6]' : 'text-[#0A1C12]'
+          }`}
           aria-label="Peerforum Home"
         >
           Peerforum.
         </Link>
 
-        <div className="hidden md:flex items-center space-x-10 text-[15px] font-medium text-[#526656]">
+        <div className={`hidden md:flex items-center space-x-10 text-[15px] font-medium transition-colors duration-300 ${
+          useLightText ? 'text-[#D3DCD4]' : 'text-[#526656]'
+        }`}>
           {primaryLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className={`transition-colors hover:text-[#0A1C12] ${
-                pathname === link.href ? 'text-[#225430]' : ''
+              className={`transition-colors duration-300 ${
+                useLightText ? 'hover:text-[#F6F8F6]' : 'hover:text-[#0A1C12]'
+              } ${
+                pathname === link.href
+                  ? useLightText ? 'text-[#F6F8F6]' : 'text-[#225430]'
+                  : ''
               }`}
             >
               {link.label}
@@ -68,8 +101,12 @@ export function Navigation() {
 
           <div className="relative group py-2">
             <button
-              className={`flex items-center gap-1 transition-colors hover:text-[#0A1C12] ${
-                isAboutActive ? 'text-[#225430]' : ''
+              className={`flex items-center gap-1 transition-colors duration-300 ${
+                useLightText ? 'hover:text-[#F6F8F6]' : 'hover:text-[#0A1C12]'
+              } ${
+                isAboutActive
+                  ? useLightText ? 'text-[#F6F8F6]' : 'text-[#225430]'
+                  : ''
               }`}
             >
               About{' '}
@@ -98,7 +135,7 @@ export function Navigation() {
 
         <button
           aria-label="Toggle Menu"
-          className="md:hidden text-[#0A1C12]"
+          className={`md:hidden transition-colors duration-300 ${useLightText ? 'text-[#F6F8F6]' : 'text-[#0A1C12]'}`}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
