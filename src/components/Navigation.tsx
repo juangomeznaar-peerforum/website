@@ -98,6 +98,19 @@ export function Navigation() {
             </Link>
           ))}
 
+          <Link
+            href="/impact"
+            className={`transition-colors duration-300 ${
+              useLightText ? 'hover:text-[#F6F8F6]' : 'hover:text-[#0A1C12]'
+            } ${
+              pathname === '/impact'
+                ? useLightText ? 'text-[#F6F8F6]' : 'text-[#225430]'
+                : ''
+            }`}
+          >
+            Our Impact
+          </Link>
+
           <div className="relative group py-2">
             <button
               className={`flex items-center gap-1 transition-colors duration-300 ${
@@ -127,19 +140,6 @@ export function Navigation() {
             </div>
           </div>
 
-          <Link
-            href="/impact"
-            className={`transition-colors duration-300 ${
-              useLightText ? 'hover:text-[#F6F8F6]' : 'hover:text-[#0A1C12]'
-            } ${
-              pathname === '/impact'
-                ? useLightText ? 'text-[#F6F8F6]' : 'text-[#225430]'
-                : ''
-            }`}
-          >
-            Our Impact
-          </Link>
-
           <Button variant="primary" className="px-5 py-2.5" asLink href="/contact">
             Talk to Us
           </Button>
@@ -166,6 +166,13 @@ export function Navigation() {
             </Link>
           ))}
 
+          <Link
+            href="/impact"
+            className="text-left text-lg font-medium text-[#0A1C12] py-3 border-b border-[#D3DCD4]"
+          >
+            Our Impact
+          </Link>
+
           <div className="py-3 border-b border-[#D3DCD4] flex flex-col">
             <span className="text-lg font-medium text-[#0A1C12] mb-3">About</span>
             <div className="flex flex-col space-y-3 pl-4 border-l-2 border-[#D3DCD4]">
@@ -180,13 +187,6 @@ export function Navigation() {
               ))}
             </div>
           </div>
-
-          <Link
-            href="/impact"
-            className="text-left text-lg font-medium text-[#0A1C12] py-3 border-b border-[#D3DCD4]"
-          >
-            Our Impact
-          </Link>
 
           <Button variant="primary" className="w-full mt-6" asLink href="/contact">
             Talk to Us
