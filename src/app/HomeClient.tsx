@@ -40,9 +40,9 @@ export function HomeClient() {
 
       <StatBar
         stats={[
-          { value: '9.2/10', label: 'Perceived Value' },
-          { value: '9.4/10', label: 'Facilitation Quality' },
-          { value: '97%', label: 'Would Recommend' },
+          { value: '4.6/5', label: 'Perceived Value' },
+          { value: '4.7/5', label: 'Facilitation Quality' },
+          { value: '92%', label: 'Would Recommend' },
           { value: 'Top 2%', label: 'Facilitator Acceptance Rate' },
         ]}
       />

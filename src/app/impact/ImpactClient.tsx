@@ -36,9 +36,9 @@ const engagements = [
 ];
 
 const aggregateStats = [
-  { value: '9.2', label: 'Perceived value', sublabel: '(out of 10)' },
-  { value: '9.4', label: 'Facilitation quality', sublabel: '(out of 10)' },
-  { value: '97%', label: 'Would recommend', sublabel: 'to a peer' },
+  { value: '4.6', label: 'Perceived value', sublabel: '(out of 5)' },
+  { value: '4.7', label: 'Facilitation quality', sublabel: '(out of 5)' },
+  { value: '92%', label: 'Would recommend', sublabel: 'to a peer' },
   { value: 'Top 2%', label: 'Facilitator', sublabel: 'acceptance rate' },
 ];
 
