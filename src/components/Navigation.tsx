@@ -52,7 +52,6 @@ export function Navigation() {
   const aboutLinks = [
     { href: '/about', label: 'About Us' },
     { href: '/facilitators', label: 'Our Facilitators' },
-    { href: '/impact', label: 'Our Impact' },
   ];
 
   const isAboutActive = aboutLinks.some((l) => pathname === l.href);
@@ -128,6 +127,19 @@ export function Navigation() {
             </div>
           </div>
 
+          <Link
+            href="/impact"
+            className={`transition-colors duration-300 ${
+              useLightText ? 'hover:text-[#F6F8F6]' : 'hover:text-[#0A1C12]'
+            } ${
+              pathname === '/impact'
+                ? useLightText ? 'text-[#F6F8F6]' : 'text-[#225430]'
+                : ''
+            }`}
+          >
+            Our Impact
+          </Link>
+
           <Button variant="primary" className="px-5 py-2.5" asLink href="/contact">
             Talk to Us
           </Button>
@@ -168,6 +180,13 @@ export function Navigation() {
               ))}
             </div>
           </div>
+
+          <Link
+            href="/impact"
+            className="text-left text-lg font-medium text-[#0A1C12] py-3 border-b border-[#D3DCD4]"
+          >
+            Our Impact
+          </Link>
 
           <Button variant="primary" className="w-full mt-6" asLink href="/contact">
             Talk to Us
