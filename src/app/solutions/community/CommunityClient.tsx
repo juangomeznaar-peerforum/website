@@ -3,7 +3,6 @@
 import { X, CheckCircle2 } from 'lucide-react';
 import { Reveal } from '@/components/Reveal';
 import { Button } from '@/components/Button';
-import { StatBar } from '@/components/StatBar';
 
 export function CommunityClient() {
   return (
@@ -125,15 +124,6 @@ export function CommunityClient() {
           </Reveal>
         </div>
       </section>
-
-      <StatBar
-        stats={[
-          { value: '3.2x', label: 'Higher Retention' },
-          { value: '91%', label: 'Find It Most Valuable' },
-          { value: '82%', label: 'NPS Increase' },
-          { value: '$0', label: 'Operational Burden' },
-        ]}
-      />
 
       <section
         aria-labelledby="why-forums-work"
